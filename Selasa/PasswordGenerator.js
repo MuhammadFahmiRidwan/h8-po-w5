@@ -35,7 +35,7 @@ function changeVocals (str) {
     return newStr
   }
   
-  function reverseWord (str) {
+function reverseWord (str) {
     //code di sini
     var newStr = '';
     for(var i=str.length-1;i>=0;i--){
@@ -44,9 +44,9 @@ function changeVocals (str) {
     return newStr;
   }
   
-  function setLowerUpperCase (str) {
+function setLowerUpperCase (str) {
     //code di sini
-    var newStr = "";
+  var newStr = "";
   for(var i=0;i< str.length;i++){
       if (str[i] === str[i].toLowerCase()) {
           newStr += str[i].toUpperCase();
@@ -57,12 +57,12 @@ function changeVocals (str) {
   return newStr;
   }
   
-  function removeSpaces (str) {
+function removeSpaces (str) {
     //code di sini
     return str.split(" ").join("");
   }
   
-  function passwordGenerator (name) {
+function passwordGenerator (name) {
     //code di sini
     if(name.length < 5){
       return 'Minimal karakter yang diinputkan adalah 5 karakter'
