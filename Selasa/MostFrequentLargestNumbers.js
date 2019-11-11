@@ -5,30 +5,10 @@
 
 function sorting(arrNumber) {
     // code di sini
-    var temp = arrNumber.sort()
-    // console.log(temp)
-    return temp
-  }
-  
-  function getTotal(arrNumber) {
-    // code di sini
-    var hasil = 0
-    for (var i = 0; i < arrNumber.length; i++) {
-      if (arrNumber[i] === arrNumber[arrNumber.length-1]) {
-        hasil++
-      }
-    }
-    if (arrNumber.length === 0) {
-      return ""
-    }
-    return "angka paling besar adalah " + arrNumber[arrNumber.length-1] + " dan jumlah kemunculan sebanyak " + hasil + " kali"
   }
 
   
   function mostFrequentLargestNumbers(arrNumber) {
-    var listSort = sorting(arrNumber);
-    var countHighest = getTotal(listSort);
-    return countHighest;
   }
   
   console.log(mostFrequentLargestNumbers([2, 8, 4, 6, 8, 5, 8, 4]));

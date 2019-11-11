@@ -7,18 +7,6 @@
 
 function kaliTerusRekursif(angka) {
     // you can only write your code here!
-    angka = "" +  angka;
-
-    if (angka.length == 1) {
-      return Number(angka)
-    }
-    else {
-      var result = 1
-      for (var i = 0; i < angka.length; i++) {
-        result = result * Number(angka[i]) 
-      }
-      return kaliTerusRekursif(result)
-    }
   }
   
   // TEST CASES

@@ -7,14 +7,6 @@
 
 function totalDigitRekursif(angka) {
     // you can only write your code here!
-    var angka = String(angka)
-    // console.log(angka)
-    if (!angka.length) {
-      return 0
-    }
-    else {
-      return + angka[0] + totalDigitRekursif(angka.slice(1))
-    }
   }
   
   // TEST CASES

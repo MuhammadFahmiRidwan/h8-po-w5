@@ -1,9 +1,5 @@
 function hapusSimbol(str) {
     // you can only write your code here!
-    var newWord = '';
-    var re = RegExp(/\w/g)
-
-    return str.match(re).join('')
 }
   
   // TEST CASES
