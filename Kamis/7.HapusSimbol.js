@@ -2,7 +2,10 @@
 
 function hapusSimbol(str) {
     // you can only write your code here!
-    
+    let newWord = '';
+    let re = RegExp(/\w/g)
+
+  return str.match(re).join('')
 }
   
   // TEST CASES
