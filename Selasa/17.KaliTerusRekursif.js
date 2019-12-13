@@ -7,6 +7,17 @@
 
 function kaliTerusRekursif(angka) {
     // you can only write your code here!
+    let string = String(angka) 
+    if (string.length === 1) {
+      return Number(string)
+    }
+    else {
+      let temp = 1
+      for (let i = 0; i < string.length; i++) {
+        temp *= Number(string[i]) 
+      }
+      return kaliTerusRekursif(Number(temp))
+    }
   }
   
   // TEST CASES

@@ -16,14 +16,51 @@
 
 function changeVocals (str) {
     //code di sini
-}
+    let result = ''
+    for(let i = 0; i < str.length; i++){
+        if(str[i] === 'a' || str[i] === 'A'){
+            result += 'b'
+        }
+        else if(str[i] === 'i' || str[i] === 'I'){
+            result += 'j'
+        }
+        else if(str[i] === 'u' || str[i] === 'U'){
+            result += 'v'
+        }
+        else if(str[i] === 'e'|| str[i] === 'E'){
+            result += 'f'
+        }
+        else if(str[i] === 'o'|| str[i] === 'O'){
+            result += 'p'
+        }
+        else {
+            result += str[i]
+        }
+    }
+    return result
+}   
   
 function reverseWord (str) {
     //code di sini
+    let reverse = ''
+    for (let i = str.length-1; i >= 0; i--) {
+        reverse += str[i]
+    }
+    return reverse
 }
   
 function setLowerUpperCase (str) {
     //code di sini
+    let set = ''
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toLowerCase()) {
+            set += str[i].toUpperCase()
+        }
+        else {
+            set += str[i].toLowerCase()
+        }
+    }
+    return set
 }
   
 function removeSpaces (str) {
@@ -32,6 +69,11 @@ function removeSpaces (str) {
   
 function passwordGenerator (name) {
     //code di sini
+    if (name.length < 5) {
+        return 'Minimal karakter yang diinputkan adalah 5'
+    }
+
+    return setLowerUpperCase(reverseWord(changeVocals(name)))
 }
   
 console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'

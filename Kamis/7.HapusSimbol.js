@@ -1,5 +1,8 @@
+// Diberikan sebuah function hapusSimbol(str) yang menerima satu parameter berupa string. Function akan me-return string yang telah bersih dari berbagai simbol, hanya menyisakan a-z dan angka 0-9.
+
 function hapusSimbol(str) {
     // you can only write your code here!
+    
 }
   
   // TEST CASES

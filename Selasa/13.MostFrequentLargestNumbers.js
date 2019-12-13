@@ -5,10 +5,41 @@
 
 function sorting(arrNumber) {
     // code di sini
+    for (let i = 0; i < arrNumber.length; i++) {
+      for (let j = i+1; j < arrNumber.length; j++) {
+        if (arrNumber[i] > arrNumber[j]) {
+          let temp = arrNumber[i]
+          arrNumber[i] = arrNumber[j]
+          arrNumber[j] = temp
+        }
+      }
+    }
+    return arrNumber
   }
-
   
   function mostFrequentLargestNumbers(arrNumber) {
+    let sort = sorting(arrNumber)
+    console.log(sort)
+    let max = -Infinity
+    for (let i = 0; i < sort.length; i++) {
+      if (max < sort[i]) {
+        max = sort[i]
+      }
+    }
+
+    let length = 0
+    for (let i = 0; i < sort.length; i++) {
+      if (sort[i] == max) {
+        length++
+      }
+    }
+    
+    if (sort == '') {
+      return ''
+    }
+    
+    return 'angka paling besar adalah ' + max + ' dan jumlah kemunculan sebanyak ' + length + ' kali'
+
   }
   
   console.log(mostFrequentLargestNumbers([2, 8, 4, 6, 8, 5, 8, 4]));
